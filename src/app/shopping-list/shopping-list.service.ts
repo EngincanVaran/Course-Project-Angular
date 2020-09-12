@@ -18,4 +18,9 @@ export class ShoppingListService {
         this.ingredientsChanged.emit(this.ingredientList.slice());
     }
 
+    addIngredientsFromRecipe(ingredients : Ingredient[]) {
+        this.ingredientList.push(...ingredients);
+        this.ingredientsChanged.emit(this.ingredientList.slice());
+    }
+
 }
